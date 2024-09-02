@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #19172e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+h2{
+    position: relative;
+    font-size: 8vw;
+    color: #19172e;
+    -webkit-text-stroke: 0.3vw #d0fe01;
+    text-transform: uppercase;
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #d0fe01;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #d0fe01;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
